@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{},"labels":{"app.kubernetes.io/instance":"rhte-simple-app"},"name":"simple-app"}}
+    openshift.io/sa.scc.mcs: s0:c22,c14
+    openshift.io/sa.scc.supplemental-groups: 1000490000/10000
+    openshift.io/sa.scc.uid-range: 1000490000/10000
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/instance: rhte-simple-app
+  name: simple-app
+  selfLink: /api/v1/namespaces/simple-app
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

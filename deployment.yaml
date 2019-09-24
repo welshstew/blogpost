@@ -1,0 +1,48 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"labels":{"app":"httpd","app.kubernetes.io/instance":"rhte-simple-app"},"name":"httpd","namespace":"simple-app"},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"httpd"}},"template":{"metadata":{"labels":{"app":"httpd"}},"spec":{"containers":[{"image":"rhscl/httpd-24-rhel7","name":"httpd","ports":[{"containerPort":8080}]}]}}}}
+  creationTimestamp: null
+  generation: 1
+  labels:
+    app: httpd
+    app.kubernetes.io/instance: rhte-simple-app
+  name: httpd
+  selfLink: /apis/extensions/v1beta1/namespaces/simple-app/deployments/httpd
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: httpd
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: httpd
+    spec:
+      containers:
+      - image: rhscl/httpd-24-rhel7
+        imagePullPolicy: Always
+        name: httpd
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status: {}

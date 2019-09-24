@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"creationTimestamp":null,"labels":{"app":"httpd","app.kubernetes.io/instance":"rhte-simple-app"},"name":"httpd","namespace":"simple-app"},"spec":{"ports":[{"port":8080,"protocol":"TCP","targetPort":8080}],"selector":{"app":"httpd"},"sessionAffinity":"None","type":"ClusterIP"}}
+  creationTimestamp: null
+  labels:
+    app: httpd
+    app.kubernetes.io/instance: rhte-simple-app
+  name: httpd
+  selfLink: /api/v1/namespaces/simple-app/services/httpd
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: httpd
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
