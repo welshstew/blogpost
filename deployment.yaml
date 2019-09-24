@@ -4,7 +4,6 @@ metadata:
   annotations:
     deployment.kubernetes.io/revision: "1"
   creationTimestamp: null
-  generation: 1
   labels:
     app: httpd
   name: httpd
