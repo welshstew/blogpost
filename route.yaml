@@ -6,7 +6,6 @@ metadata:
   creationTimestamp: null
   labels:
     app: httpd
-    app.kubernetes.io/instance: rhte-simple-app
   name: httpd
   selfLink: /apis/route.openshift.io/v1/namespaces/simple-app/routes/httpd
 spec:
