@@ -9,7 +9,7 @@ metadata:
   name: httpd
   selfLink: /apis/route.openshift.io/v1/namespaces/simple-app/routes/httpd
 spec:
-  host: httpd-simple-app.apps.east-1.sysdeseng.com
+  host: httpd-simple-app.apps-crc.testing
   port:
     targetPort: 8080
   subdomain: ""
