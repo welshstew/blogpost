@@ -19,4 +19,12 @@ spec:
     weight: 100
   wildcardPolicy: None
 status:
-  ingress: [] 
+  ingress:
+    - conditions:
+        - lastTransitionTime:
+          status:
+          type:
+      host:
+      routerCanonicalHostname:
+      routerName:
+      wildcardPolicy:
