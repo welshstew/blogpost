@@ -19,4 +19,4 @@ spec:
     weight: 100
   wildcardPolicy: None
 status:
-  ingress: null
+  ingress: [] 
