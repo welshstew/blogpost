@@ -21,6 +21,6 @@ spec:
 status:
   ingress:
     - conditions:
-        - lastTransitionTime:
+        - lastTransitionTime:'2019-09-27T15:07:34Z'
           status: 'True'
           type: Admitted
