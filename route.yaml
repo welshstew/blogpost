@@ -22,9 +22,5 @@ status:
   ingress:
     - conditions:
         - lastTransitionTime:
-          status:
-          type:
-      host:
-      routerCanonicalHostname:
-      routerName:
-      wildcardPolicy:
+          status: 'True'
+          type: Admitted
