@@ -4,8 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     app: httpd
-  name: httpd
-  selfLink: /api/v1/namespaces/simple-app/services/httpd
+  name: httpd-develop
 spec:
   ports:
   - port: 8080
